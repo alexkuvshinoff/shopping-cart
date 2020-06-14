@@ -29,9 +29,10 @@ products = [
 
 input("Please input a product identifier: ")
 
-selected_id = input("Please input a product identifier: ")
-print(selected_id)
-print(type(slected_id))
+selected_id = input("Please input a product identifier: ") #
+matching_product = [p for p in product if p["id"] == selected_id
+print(matching_product)
+print(type(matching_product))
 
 #
 # INFO DISPLAY/OPUTPUT
