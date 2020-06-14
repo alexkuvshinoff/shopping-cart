@@ -27,52 +27,54 @@ products = [
 # INFO CAPTURE
 #
 
-input("please input a product identifier: ")
+input("Please input a product identifier: ")
 
-breakpoint()
+selected_id = input("Please input a product identifier: ")
+print(selected_id)
+print(type(slected_id))
 
 #
 # INFO DISPLAY/OPUTPUT
 #
 
-def to_usd(my_price):
-    """
-    Converts a numeric value to usd-formatted string, for printing and display purposes.
-
-    Param: my_price (int or float) like 4000.444444
-
-    Example: to_usd(4000.444444)
-
-    Returns: $4,000.44
-    """
-    return f"${my_price:,.2f}" #> $12,000.71
+# def to_usd(my_price):
+  #  """
+   # Converts a numeric value to usd-formatted string, for printing and display purposes.
+#
+ #   Param: my_price (int or float) like 4000.444444
+#
+ #   Example: to_usd(4000.444444)
+#
+ #   Returns: $4,000.44
+  #  """
+   # return f"${my_price:,.2f}" #> $12,000.71
 
 # TODO: write some Python code here to produce the desired output
 
-Please input a product identifier: 1
-Please input a product identifier: 2
-Please input a product identifier: 3
-Please input a product identifier: 2
-Please input a product identifier: 1
-Please input a product identifier: DONE
+#Please input a product identifier: 1
+#Please input a product identifier: 2
+#Please input a product identifier: 3
+#Please input a product identifier: 2
+#Please input a product identifier: 1
+#Please input a product identifier: DONE
 #> ---------------------------------
-print("GREEN FOODS GROCERY")
-print("WWW.GREEN-FOODS-GROCERY.COM")
+#print("GREEN FOODS GROCERY")
+#print("WWW.GREEN-FOODS-GROCERY.COM")
 #> ---------------------------------
-Print("CHECKOUT AT:", # add time and date
+#Print("CHECKOUT AT:", # add time and date
 #> ---------------------------------
-print("SELECTED PRODUCTS:"")
+#print("SELECTED PRODUCTS:"")
 #>  ... Chocolate Sandwich Cookies ($3.50)
 #>  ... All-Seasons Salt ($4.99)
 #>  ... Robust Golden Unsweetened Oolong Tea ($2.49)
 #>  ... All-Seasons Salt ($4.99)
 #>  ... Chocolate Sandwich Cookies ($3.50)
 #> ---------------------------------
-print("SUBTOTAL:", # add total)
+#print("SUBTOTAL:", # add total)
 #> add TAX: $1.70
 #>  add TOTAL: $21.17
 #> ---------------------------------
-print("THANKS, SEE YOU AGAIN SOON!")
+#print("THANKS, SEE YOU AGAIN SOON!")
 #> ---------------------------------
 
 
