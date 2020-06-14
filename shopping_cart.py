@@ -26,15 +26,21 @@ products = [
 #
 # INFO CAPTURE
 #
-selected_id = input("Please input a product identifier: ")
-matching_product = [p for p in products if str(p["id"]) == str(selected_id)]
-matching_product = matching_product[0]
-print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
-print(type(matching_product))
+while True:
+    selected_id = input("Please input a product identifier: ")
+    if selected_id == "DONE":
+        break
+    else:
+        matching_product = [p for p in products if str(p["id"]) == str(selected_id)]
+        matching_product = matching_product[0]
+        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        print(type(matching_product))
 
 #
 # INFO DISPLAY/OPUTPUT
 #
+
+
 
 # def to_usd(my_price):
   #  """
