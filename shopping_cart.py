@@ -37,4 +37,36 @@ def to_usd(my_price):
 
 # TODO: write some Python code here to produce the desired output
 
-print(products)
+Please input a product identifier: 1
+Please input a product identifier: 2
+Please input a product identifier: 3
+Please input a product identifier: 2
+Please input a product identifier: 1
+Please input a product identifier: DONE
+#> ---------------------------------
+print("GREEN FOODS GROCERY")
+print("WWW.GREEN-FOODS-GROCERY.COM")
+#> ---------------------------------
+Print("CHECKOUT AT:", # add time and date
+#> ---------------------------------
+print("SELECTED PRODUCTS:"")
+#>  ... Chocolate Sandwich Cookies ($3.50)
+#>  ... All-Seasons Salt ($4.99)
+#>  ... Robust Golden Unsweetened Oolong Tea ($2.49)
+#>  ... All-Seasons Salt ($4.99)
+#>  ... Chocolate Sandwich Cookies ($3.50)
+#> ---------------------------------
+print("SUBTOTAL:", # add total)
+#> add TAX: $1.70
+#>  add TOTAL: $21.17
+#> ---------------------------------
+print("THANKS, SEE YOU AGAIN SOON!")
+#> ---------------------------------
+
+
+
+
+
+
+
+# print(products)
