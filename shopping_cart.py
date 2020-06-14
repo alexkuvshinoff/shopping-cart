@@ -23,73 +23,50 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
+def to_usd(my_price):
+    return f"${my_price:,.2f}" #> $12,000.71
 #
 # INFO CAPTURE
 #
 total_price = 0
+selected_ids = []
+
+# def to_usd(total_price):
+   # return f"${total_price:,.2f}" 
 
 while True:
     selected_id = input("Please input a product identifier: ")
     if selected_id == "DONE":
         break
     else:
-        matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        matching_product = matching_products[0]
-        total_price = total_price + matching_product["price"]
-        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
-        print(type(matching_product))
+        selected_ids.append(selected_id)
 
 #
-# INFO DISPLAY/OPUTPUT
-#
+# INFO DISPLAY/OPUTPUT  
+# 
 
-print("TOTAL PRICE: " + str(total_price)) #need to format as usd
+# print(selected_ids)
+for selected_id in selected_ids:
+    matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+    matching_product = matching_products[0]
+    total_price = total_price + matching_product["price"]
+    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]
 
+print("SUBTOTAL: ", + str(total_price)) 
+print("TAX: ", + ______)
+print("TOTAL: ", + str(total_price))
 
-# def to_usd(my_price):
-  #  """
-   # Converts a numeric value to usd-formatted string, for printing and display purposes.
-#
- #   Param: my_price (int or float) like 4000.444444
-#
- #   Example: to_usd(4000.444444)
-#
- #   Returns: $4,000.44
-  #  """
-   # return f"${my_price:,.2f}" #> $12,000.71
+print(products)
 
 # TODO: write some Python code here to produce the desired output
 
-#Please input a product identifier: 1
-#Please input a product identifier: 2
-#Please input a product identifier: 3
-#Please input a product identifier: 2
-#Please input a product identifier: 1
-#Please input a product identifier: DONE
-#> ---------------------------------
-#print("GREEN FOODS GROCERY")
+print("YUMMY YUMMY GROCERIES STORE")
+print("PHONE NUMBER: 555-578-5829")
+print()
 #print("WWW.GREEN-FOODS-GROCERY.COM")
 #> ---------------------------------
-#Print("CHECKOUT AT:", # add time and date
-#> ---------------------------------
-#print("SELECTED PRODUCTS:"")
-#>  ... Chocolate Sandwich Cookies ($3.50)
-#>  ... All-Seasons Salt ($4.99)
-#>  ... Robust Golden Unsweetened Oolong Tea ($2.49)
-#>  ... All-Seasons Salt ($4.99)
-#>  ... Chocolate Sandwich Cookies ($3.50)
-#> ---------------------------------
-#print("SUBTOTAL:", # add total)
-#> add TAX: $1.70
-#>  add TOTAL: $21.17
-#> ---------------------------------
-#print("THANKS, SEE YOU AGAIN SOON!")
-#> ---------------------------------
+import datetime
+now = datetime.datetime.now()
+print("CHECKOUT AT:", "now") 
 
-
-
-
-
-
-
-# print(products)
+print("THANKS, SEE YOU AGAIN SOON! STAY YUMMY!")
