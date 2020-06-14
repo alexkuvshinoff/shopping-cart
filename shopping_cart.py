@@ -23,6 +23,18 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
+#
+# INFO CAPTURE
+#
+
+input("please input a product identifier: ")
+
+breakpoint()
+
+#
+# INFO DISPLAY/OPUTPUT
+#
+
 def to_usd(my_price):
     """
     Converts a numeric value to usd-formatted string, for printing and display purposes.
