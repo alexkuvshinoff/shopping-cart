@@ -26,12 +26,10 @@ products = [
 #
 # INFO CAPTURE
 #
-
-input("Please input a product identifier: ")
-
-selected_id = input("Please input a product identifier: ") #
-matching_product = [p for p in product if p["id"] == selected_id
-print(matching_product)
+selected_id = input("Please input a product identifier: ")
+matching_product = [p for p in products if str(p["id"]) == str(selected_id)]
+matching_product = matching_product[0]
+print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 print(type(matching_product))
 
 #
