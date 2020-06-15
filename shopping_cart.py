@@ -1,4 +1,5 @@
 # shopping_cart.py
+import datetime
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -22,17 +23,14 @@ products = [
     {"id":19, "name": "Gluten Free Quinoa Three Cheese & Mushroom Blend", "department": "dry goods pasta", "aisle": "grains rice dried goods", "price": 3.99},
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
-
-def to_usd(my_price):
-    return f"${my_price:,.2f}" #> $12,000.71
 #
 # INFO CAPTURE
 #
-total_price = 0
+subtotal_price = 0
 selected_ids = []
 
-# def to_usd(total_price):
-   # return f"${total_price:,.2f}" 
+def to_usd(total_price):
+   return f"${total_price:,.2f}" 
 
 while True:
     selected_id = input("Please input a product identifier: ")
@@ -45,28 +43,30 @@ while True:
 # INFO DISPLAY/OPUTPUT  
 # 
 
-# print(selected_ids)
+print("SELECTED PRODUCTS:")
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0]
-    total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]
+    subtotal_price = subtotal_price + matching_product["price"]
+    print(" ... " + matching_product["name"] + " (" + to_usd(matching_product["price"]) + ")")
 
-print("SUBTOTAL: ", + str(total_price)) 
-print("TAX: ", + ______)
-print("TOTAL: ", + str(total_price))
+tax = (subtotal_price * 0.0875)
 
-print(products)
+print("SUBTOTAL: " + str(to_usd(subtotal_price)))
+print("TAX: " + str(to_usd(tax)))
+print("TOTAL: " + str(to_usd(subtotal_price + tax)))
+
+# print(products)
 
 # TODO: write some Python code here to produce the desired output
 
 print("YUMMY YUMMY GROCERIES STORE")
 print("PHONE NUMBER: 555-578-5829")
 print()
-#print("WWW.GREEN-FOODS-GROCERY.COM")
+print("WWW.YUMMYGROCERIES.COM")
 #> ---------------------------------
-import datetime
+
 now = datetime.datetime.now()
-print("CHECKOUT AT:", "now") 
+print("CHECKOUT AT:", now.strftime("%Y-%m-%d %H:%M:%S")) 
 
 print("THANKS, SEE YOU AGAIN SOON! STAY YUMMY!")
