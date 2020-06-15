@@ -38,10 +38,18 @@ while True:
         break
     else:
         selected_ids.append(selected_id)
-
+print("---------------------------------")
 #
 # INFO DISPLAY/OPUTPUT  
 # 
+print("YUMMY YUMMY GROCERIES STORE")
+print("WWW.YUMMY-YUMMY-GORCERIES.COM")
+print("PHONE NUMBER: 555-578-5829")
+print("---------------------------------")
+
+now = datetime.datetime.now()
+print("CHECKOUT AT:", now.strftime("%Y-%m-%d %H:%M:%S")) 
+print("---------------------------------")
 
 print("SELECTED PRODUCTS:")
 for selected_id in selected_ids:
@@ -52,21 +60,9 @@ for selected_id in selected_ids:
 
 tax = (subtotal_price * 0.0875)
 
+print("---------------------------------")
 print("SUBTOTAL: " + str(to_usd(subtotal_price)))
 print("TAX: " + str(to_usd(tax)))
 print("TOTAL: " + str(to_usd(subtotal_price + tax)))
-
-# print(products)
-
-# TODO: write some Python code here to produce the desired output
-
-print("YUMMY YUMMY GROCERIES STORE")
-print("PHONE NUMBER: 555-578-5829")
-print()
-print("WWW.YUMMYGROCERIES.COM")
-#> ---------------------------------
-
-now = datetime.datetime.now()
-print("CHECKOUT AT:", now.strftime("%Y-%m-%d %H:%M:%S")) 
-
+print("---------------------------------")
 print("THANKS, SEE YOU AGAIN SOON! STAY YUMMY!")
