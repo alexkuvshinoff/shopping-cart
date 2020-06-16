@@ -36,8 +36,12 @@ while True:
     selected_id = input("Please input a product identifier: ")
     if selected_id == "DONE":
         break
-    else:
+
+    if selected_id.isdigit() and (0 < int(selected_id) <= len(products)):
         selected_ids.append(selected_id)
+    else:
+        print("Whoops, that item doesn't exist")
+
 print("---------------------------------")
 #
 # INFO DISPLAY/OPUTPUT  
